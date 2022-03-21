@@ -1,0 +1,11 @@
+
+.nav-item a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar-brand{
+    font-weight: 1000;
+    font-size: 30px;
+}

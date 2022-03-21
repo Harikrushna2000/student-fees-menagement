@@ -1,0 +1,110 @@
+<div
+  style="
+    background-image: url('/assets/creat.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+  "
+>
+  <div
+    style="width: 330px; margin: auto"
+    *ngIf="message"
+    class="alert alert-success alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      (click)="reset()"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div
+    style="width: 330px; margin: auto"
+    *ngIf="errMsg"
+    class="alert alert-danger alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>{{ errMsg }}</strong>
+    <button
+      type="button"
+      (click)="reset()"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <br />
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="card p-2">
+        <div class="card-title" style="margin-bottom: 0">
+          <h4><i>Insert Fees Details</i></h4>
+          <p style="margin-bottom: 0; color: white">
+            _________________________________________________
+          </p>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="feesForm">
+            <div class="input-group">
+              <div class="input-group-text"><i class="fa fa-user-o"></i></div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="firstname"
+                id="autoSizingInputGroup"
+                placeholder="First_Name"
+              />
+            </div>
+            <div class="input-group">
+              <div class="input-group-text"><i class="fa fa-user-o"></i></div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="lastname"
+                id="autoSizingInputGroup"
+                placeholder="Last_Name"
+              />
+            </div>
+            <div class="input-group">
+              <div class="input-group-text"><i class="fa fa-at"></i></div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="email"
+                id="autoSizingInputGroup"
+                placeholder="Email"
+              />
+            </div>
+            <div class="input-group">
+              <div class="input-group-text"><i class="fa fa-phone"></i></div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="mobile_no"
+                id="autoSizingInputGroup"
+                placeholder="Mobile_No"
+              />
+            </div>
+            <div class="input-group">
+              <div class="input-group-text"><i class="fa fa-inr"></i></div>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="stu_fees"
+                id="autoSizingInputGroup"
+                placeholder="Stu_Fees"
+              />
+            </div>
+
+            <button class="btn btn-primary" style="margin-left: 70px;" (click)="feesData()">Add</button>
+            <button class="btn btn-success" (click)="updateData()">Edit</button>
+
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

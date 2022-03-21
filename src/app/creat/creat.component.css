@@ -1,0 +1,27 @@
+button{
+    margin: 20px 20px;
+}
+.btn:hover{
+    background-color: yellow;
+    color: black;
+}
+h4{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+.input-group-text{
+    background-color: yellow;
+}
+.input-group{
+    margin: 10px;
+    width: 280px;
+}
+.input-group i{
+    font-weight: 700;
+}
+.card{
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+}

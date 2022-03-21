@@ -1,0 +1,34 @@
+
+<div class="all-data" style="background-color: rgb(178, 219, 233); padding: 30px;">
+    <div style="margin: auto;" *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{message}}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">LastName</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile_No</th>
+          <th scope="col">Stu_Fees</th>
+          <th scope="col">Edit_data</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of feesdata">
+          <th scope="row">{{item.stu_id}}</th>
+          <td>{{item.firstname}}</td>
+          <td>{{item.lastname}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.mobile_no}}</td>
+          <td>{{item.stu_fees}}</td>
+          <td style="text-align: center;"><button [routerLink]="['/creat/',item.stu_id]" class="btn btn-success">Edit</button></td>
+          <td style="text-align: center;"><button (click)="deletedata(item.stu_id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

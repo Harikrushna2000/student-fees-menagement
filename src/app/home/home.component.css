@@ -1,0 +1,14 @@
+.home-text{
+   top: 50%;
+   left: 50%;
+   padding: 167px;
+   text-align: center;
+   color: white;
+}
+h1{
+    font-size: 80px;
+    font-weight:800;
+}
+h3{
+    font-size: 50px;
+}
